@@ -1,0 +1,66 @@
+@import "../../variables";
+
+.card {
+
+  background-color: transparent;
+  width: 75px;
+  height: 104px;
+  perspective: 300px;
+  margin: 3px;
+  transition: all 0.3s;
+  position: relative;
+  bottom: 0;
+  z-index: 10;
+  border-radius: 10px;
+  cursor: pointer;
+
+  @include tablet {
+    width: 100px; height: 138px;
+    margin: 10px;
+  }
+
+  &__content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.3s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 16px 0 rgba(0,0,0,0.2);
+    border-radius: 10px;
+  }
+
+  &__front, &__back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    img {
+      width: 100%; height: 100%; object-fit: contain;
+    }
+  }
+
+  &__front {
+    background-color: #bbb;
+    color: black;
+  }
+
+  &__back {
+    background: blue;
+    transform: rotateY(180deg);
+  }
+
+  &-open {
+    .card__content {
+      transform: rotateY(180deg);
+    }
+  }
+
+  &-done {
+    bottom: -200px; opacity: 0; z-index: 1;
+  }
+
+}

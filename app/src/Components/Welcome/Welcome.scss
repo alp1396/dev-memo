@@ -1,0 +1,15 @@
+@import "../../variables";
+
+.welcome {
+
+  background-color: $color-green;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  img { width: 58px; height: auto; }
+  h1 { color: $color-white; margin-bottom: 60px; }
+
+}

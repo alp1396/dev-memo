@@ -1,0 +1,54 @@
+@import "../../variables";
+
+.field {
+
+  background-color: $color-green;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  &__actions {
+    padding: 20px 0;
+  }
+
+  &__score {
+    width: 100%;
+    &_wrap {
+      font-size: 18px; color: $color-white; text-align: right; margin-top: 20px;  padding-right: 20px;
+    }
+    
+  }
+  &__cards {
+    
+    margin: 0px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include tablet {
+      margin: 20px;
+    }
+
+    &_wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 0 auto;
+      overflow: hidden;
+
+      @include tablet {
+        width: 720px; height: 480px;
+      }
+
+    }
+    
+  }
+
+}

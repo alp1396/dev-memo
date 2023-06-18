@@ -1,0 +1,23 @@
+/**
+ * 
+ * Переменные, цвета
+ *
+ */
+
+$color-white: #f5f5f5;
+$color-green: #3e8c4a;
+$color-teal: #46a2a8;
+
+/**
+ * 
+ * Адаптивная верстка, помощники
+ *
+ */
+ 
+ $screen-tablet: 768px;
+ $screen-desktop: 1200px;
+
+// Планшеты и широкоэкранные устройства
+@mixin tablet {@media (min-width: #{$screen-tablet}) {@content;}}
+// Десктопы и большие планшеты
+@mixin desktop {@media (min-width: #{$screen-desktop}) {@content;}}

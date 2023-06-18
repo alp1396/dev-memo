@@ -1,0 +1,16 @@
+@import "../../variables";
+
+.endgame {
+
+  background-color: $color-green;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  img { width: 58px; height: auto; }
+  h1 { color: $color-white; margin-bottom: 20px; }
+  p { font-size: 16px; color: $color-white; margin-bottom: 40px; }
+
+}
